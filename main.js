@@ -1,7 +1,12 @@
 import * as d3 from "d3";
 import vegaEmbed from "vega-embed";
+import { spec } from "./distCharge";
+
+let data = await d3.json("charge_count.json");
 
 d3.select("#d3-div").append("p").text("hello from D3");
+
+
 
 vegaEmbed("#vega-div", {
   $schema: "https://vega.github.io/schema/vega-lite/v5.json",
@@ -24,4 +29,9 @@ vegaEmbed("#vega-div", {
     x: { field: "a", type: "nominal", axis: { labelAngle: 0 } },
     y: { field: "b", type: "quantitative" },
   },
+});
+
+vegaEmbed("#vega-div2", spec).then((res) => {
+  console.log(res.view);
+  res.view.change("table", res.view.changeset().insert(data)).run();
 });
