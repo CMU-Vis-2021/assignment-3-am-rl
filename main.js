@@ -2,7 +2,7 @@ import * as d3 from "d3";
 import vegaEmbed from "vega-embed";
 import { spec } from "./distCharge";
 
-let data = await d3.json("charge_count.json");
+let charge_data = await d3.json("charge_count2.json");
 
 d3.select("#d3-div").append("p").text("hello from D3");
 
@@ -33,5 +33,5 @@ vegaEmbed("#vega-div", {
 
 vegaEmbed("#vega-div2", spec).then((res) => {
   console.log(res.view);
-  res.view.change("table", res.view.changeset().insert(data)).run();
+  res.view.change("table", res.view.changeset().insert(change_data)).run();
 });
