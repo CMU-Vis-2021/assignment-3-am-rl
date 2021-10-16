@@ -1,6 +1,9 @@
 export let spec = {
   $schema: "https://vega.github.io/schema/vega-lite/v5.json",
   data: { name: "table" },
+  selection: {
+    pts: { type: "multi" },
+  },
   mark: { type: "bar" },
   encoding: {
     y: {
@@ -11,6 +14,12 @@ export let spec = {
       axis: { labelLimit: 300 },
     },
     x: { field: "count", type: "quantitative", title: "Inmate count" },
+    color: {
+      condition: {
+        selection: "pts",
+      },
+      value: "grey",
+    },
   },
   title: "Distribution of current NYC inmate criminal charges",
   config: {
