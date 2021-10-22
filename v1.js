@@ -5,19 +5,20 @@ export let v1_spec = {
   params: [
     {
       name: "brush",
-      select: { type: "interval", encodings: ["x"] },
+      select: { type: "interval", encodings: ["y"] },
     },
   ],
   encoding: {
     y: {
-      field: "charge",
+      field: "TOP_CHARGE_NAME",
       type: "nominal",
       sort: false,
       title: null,
       axis: { labelLimit: 300 },
     },
     x: {
-      field: "count",
+      aggregate: "count", 
+      field: "TOP_CHARGE_NAME",
       type: "quantitative",
       title: "Inmate count",
     },
