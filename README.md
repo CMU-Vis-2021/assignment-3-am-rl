@@ -3,7 +3,8 @@
 ### Project goals
 For Assignment 3 we chose to work with a Department of Corrections data set from New York City’s OpenData initiative. This data provides a daily summary of all currently-detained inmates in New York city, including several key demographic details for each inmate. It also contains “yes/no” data on what is known in New York as “Brad H. Status.” Following a 2003 settlement for a 1999 class action lawsuit against the city for insufficiently supporting inmates with mental health needs, New York’s Department of Corrections is now required to track which inmates have been diagnosed with a mental illness of some kind.
 Our objective in this assignment was to help the user gain a better — and more human — understanding of who exactly has been charged with what crimes in New York City. In particular we hoped to help the user understand the relative frequency of each criminal charge, along with the breakdown of inmates for each charge by race, gender, and mental health status. We summarized this project’s objective with the following research question:
-What are the relationships between criminal charge and NYC inmates’ race, gender, and mental health status?
+
+##### What are the relationships between criminal charge and NYC inmates’ race, gender, and mental health status?
  
 ### Design Decisions
 We chose to use bar charts because we were dealing entirely with nominal data. It made sense to have each of the four charts appear similarly to make clear that they were all showing inmate counts, just grouped by different variables. 
