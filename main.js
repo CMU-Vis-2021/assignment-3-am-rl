@@ -36,18 +36,17 @@ d3.select("#d3-div").append("p")
 //   },
 // })
 
-let embed1 = vegaEmbed("#vega-div", v1_spec).then((res) => {
-  res.view.width(800)
+
+let embed2 = vegaEmbed("#vega-div2", v2_spec).then((res) => {
+  res.view.width(300)
   res.view.change("table", res.view.changeset().insert(raw_data)).run()
 })
 
-vegaEmbed("#vega-div2", v2_spec).then((res) => {
-  let v2 = res.view
-  res.view.width(300)
+let embed1 = vegaEmbed("#vega-div", v1_spec).then((res) => {
+  res.view.width(800)
   res.view.change("table", res.view.changeset().insert(raw_data)).run()
-
-  embed1.input.addSignalListener("select", (_, value) => {
-    v2.signal("select", value).runAsync();
+  res.view.addSignalListener("select", (_, value) => {
+    embed2.view.signal("select", value).runAsync();
   })
 })
 
