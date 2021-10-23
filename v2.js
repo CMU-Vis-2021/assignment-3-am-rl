@@ -5,13 +5,13 @@ export let v2_spec = {
   params: [
     {
       name: "select",
-      value: { "TOP_CHARGE_NAME" : ["Murder- 2nd degree"] },
+      value: { TOP_CHARGE_NAME: ["Murder- 2nd degree"] },
     },
   ],
   transform: [
     {
-      filter: "datum['TOP_CHARGE_NAME'] == select['TOP_CHARGE_NAME']"
-    }
+      filter: "datum['TOP_CHARGE_NAME'] == select['TOP_CHARGE_NAME']",
+    },
   ],
   encoding: {
     y: {
@@ -19,12 +19,13 @@ export let v2_spec = {
       type: "nominal",
       title: null,
       axis: { labelLimit: 300 },
+      sort: "-x",
     },
     x: {
-      aggregate: "count", 
+      aggregate: "count",
       field: "RACE",
       type: "quantitative",
       title: "Inmate count by Race",
-    }
-  }
+    },
+  },
 }
