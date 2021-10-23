@@ -7,6 +7,9 @@ export let v4_spec = {
       filter: "datum['TOP_CHARGE_NAME'] == select['TOP_CHARGE_NAME']",
     },
   ],
+  title: {
+    text: "Inmate count by Known Mental Health Issues"
+  },
   params: [
     {
       name: "select",
@@ -25,7 +28,7 @@ export let v4_spec = {
       aggregate: "count",
       field: "BRADH",
       type: "quantitative",
-      title: "Inmate count by Mental Health Status",
+      title: "Inmate count",
     },
   },
 }

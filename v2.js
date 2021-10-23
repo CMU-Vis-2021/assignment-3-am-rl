@@ -8,6 +8,9 @@ export let v2_spec = {
       value: { TOP_CHARGE_NAME: [] },
     },
   ],
+  title: {
+    text: "Inmate Count by Race"
+  },
   transform: [
     {
       filter: "datum['TOP_CHARGE_NAME'] == select['TOP_CHARGE_NAME']",
@@ -25,7 +28,7 @@ export let v2_spec = {
       aggregate: "count",
       field: "RACE",
       type: "quantitative",
-      title: "Inmate count by Race",
+      title: "Inmate count",
     },
   },
 }

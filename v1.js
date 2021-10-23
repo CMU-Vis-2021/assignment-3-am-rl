@@ -8,6 +8,9 @@ export let v1_spec = {
       select: { type: "point", encodings: ["y"] },
     },
   ],
+  title: {
+    text: "Inmate Count by Top Charge"
+  },
   encoding: {
     y: {
       field: "TOP_CHARGE_NAME",
@@ -20,7 +23,7 @@ export let v1_spec = {
       aggregate: "count",
       field: "TOP_CHARGE_NAME",
       type: "quantitative",
-      title: "Inmate count by Top Charge",
+      title: "Inmate count",
     },
     color: {
       condition: {

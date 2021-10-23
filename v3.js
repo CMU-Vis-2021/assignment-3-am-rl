@@ -7,6 +7,9 @@ export let v3_spec = {
       filter: "datum['TOP_CHARGE_NAME'] == select['TOP_CHARGE_NAME']",
     },
   ],
+  title: {
+    text: "Inmate Count by Gender"
+  },
   params: [
     {
       name: "select",
@@ -25,7 +28,7 @@ export let v3_spec = {
       aggregate: "count",
       field: "GENDER",
       type: "quantitative",
-      title: "Inmate count by Gender",
+      title: "Inmate count",
     },
   },
 }
