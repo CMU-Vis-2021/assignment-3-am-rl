@@ -1,32 +1,30 @@
-export let v1_spec = {
+export let v2_spec = {
   $schema: "https://vega.github.io/schema/vega-lite/v5.json",
   data: { name: "table" },
   mark: { type: "bar" },
   params: [
     {
       name: "select",
-      select: { type: "point", encodings: ["y"] },
+      value: { "TOP_CHARGE_NAME" : ["Murder- 2nd degree"] },
     },
+  ],
+  transform: [
+    {
+      filter: "datum['TOP_CHARGE_NAME'] == select['TOP_CHARGE_NAME']"
+    }
   ],
   encoding: {
     y: {
-      field: "TOP_CHARGE_NAME",
+      field: "RACE",
       type: "nominal",
-      sort: false,
       title: null,
       axis: { labelLimit: 300 },
     },
     x: {
       aggregate: "count", 
-      field: "TOP_CHARGE_NAME",
+      field: "RACE",
       type: "quantitative",
-      title: "Inmate count by Top Charge",
-    },
-    color: {
-      condition: {
-        selection: "select",
-      },
-      value: "grey",
+      title: "Inmate count by Race",
     }
   }
 }
