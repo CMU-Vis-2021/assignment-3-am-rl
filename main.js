@@ -20,18 +20,21 @@ let view4;
 vegaEmbed("#vega-div2", v2_spec).then((res) => {
   view2 = res.view;
   res.view.width(300);
+  res.view.width(200);
   res.view.change("table", res.view.changeset().insert(raw_data)).run();
 });
 
 vegaEmbed("#vega-div3", v3_spec).then((res) => {
   view3 = res.view;
   res.view.width(300);
+  res.view.width(200);
   res.view.change("table", res.view.changeset().insert(raw_data)).run();
 });
 
 vegaEmbed("#vega-div4", v4_spec).then((res) => {
   view4 = res.view;
   res.view.width(300);
+  res.view.width(200);
   res.view.change("table", res.view.changeset().insert(raw_data)).run();
 });
 

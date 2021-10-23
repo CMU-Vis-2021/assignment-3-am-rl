@@ -5,7 +5,7 @@ export let v2_spec = {
   params: [
     {
       name: "select",
-      value: { TOP_CHARGE_NAME: ["Murder- 2nd degree"] },
+      value: { TOP_CHARGE_NAME: [] },
     },
   ],
   transform: [
