@@ -42,30 +42,28 @@ let embed2 = vegaEmbed("#vega-div2", v2_spec).then((res) => {
   res.view.change("table", res.view.changeset().insert(raw_data)).run()
 })
 
+let embed3 = vegaEmbed("#vega-div3", v3_spec).then((res) => {
+  let v3 = res.view
+  res.view.width(300)
+  res.view.change("table", res.view.changeset().insert(raw_data)).run()
+})
+
+let embed4 = vegaEmbed("#vega-div4", v4_spec).then((res) => {
+  let v4 = res.view
+  res.view.width(300)
+  res.view.change("table", res.view.changeset().insert(raw_data)).run()
+})
+
 let embed1 = vegaEmbed("#vega-div", v1_spec).then((res) => {
   res.view.width(800)
   res.view.change("table", res.view.changeset().insert(raw_data)).run()
   res.view.addSignalListener("select", (_, value) => {
     embed2.view.signal("select", value).runAsync();
   })
-})
-
-vegaEmbed("#vega-div3", v3_spec).then((res) => {
-  let v3 = res.view
-  res.view.width(300)
-  res.view.change("table", res.view.changeset().insert(raw_data)).run()
-
-  embed1.input.addSignalListener("select", (_, value) => {
-    v3.signal("select", value).runAsync();
+  res.view.addSignalListener("select", (_, value) => {
+    embed3.view.signal("select", value).runAsync();
   })
-})
-
-vegaEmbed("#vega-div4", v4_spec).then((res) => {
-  let v4 = res.view
-  res.view.width(300)
-  res.view.change("table", res.view.changeset().insert(raw_data)).run()
-
-  embed1.input.addSignalListener("select", (_, value) => {
-    v4.signal("select", value).runAsync();
+  res.view.addSignalListener("select", (_, value) => {
+    embed4.view.signal("select", value).runAsync();
   })
 })
