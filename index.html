@@ -6,18 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment 3</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,200&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h2>Exploring Inmate Demographics by Top Charge</h2>
-    <h4>Description of data</h4>
-    <h3>To see demographic breakdowns by charge, click one bar in the top charges graph.</h3>
+    <h2>Exploring NYC Dept. of Corrections Inmate Data</h2>
+    <div id="container">
+      <p id="description">
+        The following is an interactive visualization of the inmates currently
+        detained in NYC, grouped by the charges of which they are accused.
+      </p>
+      <p class="instructions">
+        To see additional analyses of inmate demographics by charge type, please
+        click on a single bar and <u>scroll down</u>. The additional info will
+        update at the bottom of this page.
+      </p>
+    </div>
+
     <div id="vega-div"></div>
-    <div class = "sec">
+    <div class="sec">
       <div id="vega-div2"></div>
       <div id="vega-div3"></div>
       <div id="vega-div4"></div>
+      <div>
+        <p class="instructions">Varible Encoding:</p>
+        <ul class="instructions">
+          <li>B = Black</li>
+          <li>W = White</li>
+          <li>I = Native American</li>
+          <li>A = Asian</li>
+          <li>O = Other</li>
+        </ul>
+      </div>
     </div>
-    <h4>Varibale Encoding: B:Black, O:Other etc.</h4>
+
     <script type="module" src="./main.js"></script>
   </body>
 </html>
