@@ -1,12 +1,36 @@
+body {
+  font-family: "Roboto Mono", monospace;
+}
+
+.instructions {
+  font-weight: 400;
+  font-size: smaller;
+  font-style: italic;
+  width: 500;
+}
+
+#container {
+  padding-bottom: 0.75cm;
+  width: 700px;
+}
+
+#vega-div {
+  display: inline;
+  /* padding-bottom: 2cm; */
+}
 
 #vega-div2 {
-    left: 150px;
+  left: 150px;
 }
 
 #vega-div3 {
-    left: 150px;
+  left: 150px;
 }
 
 #vega-div4 {
-    left: 150px;
+  left: 150px;
+}
+
+#sec {
+  width: 500;
 }
