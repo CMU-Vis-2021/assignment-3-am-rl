@@ -12,12 +12,12 @@ export let v1_spec = {
     y: {
       field: "TOP_CHARGE_NAME",
       type: "nominal",
-      sort: false,
+      sort: "-x",
       title: null,
       axis: { labelLimit: 300 },
     },
     x: {
-      aggregate: "count", 
+      aggregate: "count",
       field: "TOP_CHARGE_NAME",
       type: "quantitative",
       title: "Inmate count by Top Charge",
@@ -27,6 +27,6 @@ export let v1_spec = {
         selection: "select",
       },
       value: "grey",
-    }
-  }
+    },
+  },
 }

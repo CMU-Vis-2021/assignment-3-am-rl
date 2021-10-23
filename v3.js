@@ -4,13 +4,13 @@ export let v3_spec = {
   mark: { type: "bar" },
   transform: [
     {
-      filter: {param:"select"}
-    }
+      filter: { param: "select" },
+    },
   ],
   params: [
     {
       name: "select",
-      value: { "TOP_CHARGE_NAME" : ["Murder- 2nd degree"] },
+      value: { TOP_CHARGE_NAME: ["Murder- 2nd degree"] },
     },
   ],
   encoding: {
@@ -19,12 +19,13 @@ export let v3_spec = {
       type: "nominal",
       title: null,
       axis: { labelLimit: 300 },
+      sort: "-x",
     },
     x: {
-      aggregate: "count", 
+      aggregate: "count",
       field: "GENDER",
       type: "quantitative",
       title: "Inmate count by Gender",
-    }
-  }
+    },
+  },
 }
